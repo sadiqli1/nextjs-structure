@@ -9,7 +9,7 @@ export default async function page({ params: { lang } }) {
     <section>
       <div className="container flex flex-col	pt-8">
         {data.slice(0, 10)?.map((value, index) => (
-          <Link href={`/products/${value?.id}`}>{value?.title}</Link>
+          <Link href={`/products/${value?.id}`} key={index}>{value?.title}</Link>
         ))}
       </div>
     </section>
